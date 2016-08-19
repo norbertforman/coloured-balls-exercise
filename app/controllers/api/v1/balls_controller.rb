@@ -1,7 +1,7 @@
 module Api
   module V1
     class BallsController < BaseController
-      def index
+      def create
         return_response do
           BallColorService.new(params).calculate
         end

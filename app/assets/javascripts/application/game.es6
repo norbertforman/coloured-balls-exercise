@@ -9,8 +9,12 @@ class Game {
   addBall() {
     this.clearBalls();
     this.drawBalls();
-
-    this.newBall('purple');
+    let number = this.balls.length;
+    ajax('POST', `/api/v1/balls?number=${number}`).then((data) => {
+      this.newBall(data.next_color);
+    }, (data) => {
+      console.warn(data);
+    });
   }
 
   newBall(color) {

@@ -1,0 +1,9 @@
+.game
+  %button.btn{ onclick: "dropBall()" } Drop
+  .clearfix
+  .game-console
+    %canvas#canvas
+
+= content_for :scripts do
+  var canvas = document.getElementById("canvas");
+  var game = new Game(canvas);

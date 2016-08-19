@@ -1,0 +1,3 @@
+function dropBall() {
+  game.addBall();
+}

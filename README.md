@@ -1,24 +1,6 @@
-# README
+# Coloured Balls Exercise
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Instalation
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* clone the project
+* run bundle install

@@ -8,10 +8,10 @@ class BallColorService
   end
 
   def calculate
-    color = 'pink'
-    color = 'green' if @number % 3 == 0
-    color = 'blue' if @number % 5 == 0
-    color = 'purple' if @number % 15 == 0
-    { next_color: color }
+    data = { color: 'pink', score: 1 }
+    data = { color: 'green', score: 3 } if @number % 3 == 0
+    data = { color: 'blue', score: 5 } if @number % 5 == 0
+    data = { color: 'purple', score: 15 } if @number % 15 == 0
+    data
   end
 end

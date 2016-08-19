@@ -4,23 +4,32 @@ class Game {
     this.canvas.width = canvas.width / 2;
     this.ctx = canvas.getContext('2d');
     this.balls = [];
+    this.sum = 0;
+    this.score = 0;
   }
 
   addBall() {
     this.clearBalls();
     this.drawBalls();
-    let number = this.balls.length;
-    ajax('POST', `/api/v1/balls?number=${number}`).then((data) => {
-      this.newBall(data.next_color);
+    ajax('POST', `/api/v1/balls?number=${this.sum}`).then((data) => {
+      this.newBall(data.color, data.score);
+      this.setData();
     }, (data) => {
       console.warn(data);
     });
   }
 
-  newBall(color) {
-    let ball = new Ball(this.canvas.width, 30, color, this.ctx);
+  setData() {
+    document.getElementById('sum-value').innerHTML = this.sum;
+    document.getElementById('score-value').innerHTML = this.score;
+  }
+
+  newBall(color, score) {
+    let ball = new Ball(this.canvas.width, 30, color, score, this.ctx);
     ball.drawBall();
     this.balls.unshift(ball);
+    this.sum += 1;
+    this.score += ball.score;
   }
 
   drawBalls() {

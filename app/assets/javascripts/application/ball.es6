@@ -1,10 +1,11 @@
 class Ball {
-  constructor(x, y, color, ctx) {
+  constructor(x, y, color, score, ctx) {
     this.index = 1;
     this.x = x;
     this.y = y;
     this.color = color;
     this.ctx = ctx;
+    this.score = score;
   }
 
   drawBall() {

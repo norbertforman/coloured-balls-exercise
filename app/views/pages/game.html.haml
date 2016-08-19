@@ -1,6 +1,13 @@
 .game
   %button.btn{ onclick: "dropBall()" } Drop
   .clearfix
+  .data
+    .sum
+      Sum:
+      .value#sum-value 0
+    .score
+      Score:
+      .value#score-value 0
   .game-console
     %canvas#canvas
 

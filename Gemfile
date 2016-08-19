@@ -33,8 +33,6 @@ gem 'jbuilder', '~> 2.5'
 
 # HTML Abstraction Markup Language
 gem 'haml'
-# Bootstrap 4 ruby gem for Ruby on Rails
-gem 'bootstrap', '~> 4.0.0.alpha3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

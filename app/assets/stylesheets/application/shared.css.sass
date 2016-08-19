@@ -1,0 +1,45 @@
+@import mixins
+@import colors
+
+body
+  font-family: 'Trebuchet MS', sans-serif
+  @include gradient-background($soft-blue, $soft-violet)
+
+  .align-center
+    text-align: center
+
+  .large
+    font-size: 5em
+
+  .medium
+    font-size: 3em
+
+  .small
+    font-size: 2em
+
+  .title
+    color: $vivid-blue
+    text-shadow: 0 0 1px $pale-blue
+
+  .btn
+    color: $very-dark-grayish-blue
+    background-color: white
+    border-color: $light-gray
+    display: inline-block
+    text-decoration: none
+    white-space: nowrap
+    vertical-align: middle
+    cursor: pointer
+    @include user-select
+    border: 1px solid transparent
+    padding: .5rem 1rem
+    font-size: 1rem
+    border-radius: .25rem
+
+    &:hover
+      background-color: $very-light-gray
+      border-color: gray
+
+  .btn-orange-pulse
+    color: white
+    @include pulse($light-orange, $vivid-orange)

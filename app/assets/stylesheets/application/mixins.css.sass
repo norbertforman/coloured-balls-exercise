@@ -1,0 +1,30 @@
+@mixin gradient-background($light, $dark)
+  background: $light
+  background: -webkit-linear-gradient(to left, $light, $dark)
+  background: linear-gradient(to left, $light, $dark)
+
+@mixin user-select
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+@mixin pulse($light, $dark)
+  -webkit-animation-name: pulseEffect
+  -webkit-animation-duration: 2s
+  -webkit-animation-iteration-count: infinite
+
+  &:hover
+    -webkit-animation: none
+    background-color: $dark
+    border-color: $dark
+
+  @-webkit-keyframes pulseEffect
+    from
+      background-color: $dark
+      -webkit-box-shadow: 0 0 9px #333
+    50%
+      background-color: $light
+      -webkit-box-shadow: 0 0 18px $light
+    to
+      background-color: $dark
+      -webkit-box-shadow: 0 0 9px #333

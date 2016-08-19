@@ -3,7 +3,7 @@ module Api
     class BallsController < BaseController
       def index
         return_response do
-          { test: 'really' }
+          BallColorService.new(params).calculate
         end
       end
     end

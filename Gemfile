@@ -33,13 +33,17 @@ gem 'jbuilder', '~> 2.5'
 
 # HTML Abstraction Markup Language
 gem 'haml'
-
 # provides a clean layer between the model and the controller
 gem 'active_model_serializers'
+# protect our API from DDoS, brute force attacks, hammering, or even to monetize
+# with paid usage limits
+gem 'rack-attack'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  # testing framework for Rails
+  gem 'rspec-rails'
 end
 
 group :development do
